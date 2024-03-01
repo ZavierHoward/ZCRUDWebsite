@@ -1,0 +1,46 @@
+body{
+    background-color: black;
+}
+h1{
+    color: black;
+    background-color: lime;
+    border-color: black;
+    border-radius: 16px;
+    border-style: outset;
+    text-align: center;
+    padding: 12px;
+}
+p{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Lucida Sans';
+    color: white
+}
+button{
+    background-color: lime;
+    border-style:solid;
+    border-color:black;
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: 'Lucida Sans';
+    transition-duration: 0.4s;
+}
+.options{
+    text-align: center;
+}
+
+input{
+    background-color: lime;
+    font-size: 30px;
+    color: black;
+    border-color:white;
+    border-radius: 10px;
+}
+
+.theDB{
+
+    background-color: lime;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+}

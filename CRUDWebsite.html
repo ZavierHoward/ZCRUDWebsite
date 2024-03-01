@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CS447HW2</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1> Zavier Howard CRUD Website </h1>  
+        <h1> Name | ID | Points </h1>
+        <div class = "theDB">
+            {% for player in players %}
+                {{player}}
+                <br>
+            {%endfor%}
+        </div>
+    </body>
+
+    <div class = "options">
+        <form method=post action=/create>
+            <textarea name=newUserName></textarea>
+            <textarea name=newUserID></textarea>
+            <textarea name=newUserPoints></textarea>
+            <input type=submit name=create value=CreateUser>
+        </form>
+
+        <form method=post action=/read>
+            <textarea name=findUser></textarea>
+            <input type=submit name=find value=FindUser>
+        </form>
+
+        <p>
+            {% for player in foundPlayer %}
+                
+            {%endfor%}
+
+            {% if foundPlayer %}
+                {{foundPlayer[0]}} is in the database! Their ID is {{foundPlayer[1]}} and they have {{foundPlayer[2]}}
+            {% endif %}
+
+        </p>
+
+        <form method=post action=/update>
+            <textarea name=userToUpdate></textarea>
+            <textarea name=IDChange></textarea>
+            <textarea name=scoreChange></textarea>
+            <input type=submit name=update value=UpdateUser>
+        </form>
+
+        <form method=post action=/delete>
+            <textarea name=removeUser></textarea>
+            <input type=submit name=delete value=RemoveUser>
+        </form>
+    </div>
+
+    
+    
+</html>
